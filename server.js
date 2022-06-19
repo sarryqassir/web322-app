@@ -5,7 +5,7 @@
  *
  *  Name: Sarry Al-Qassir Student ID: 119161206 Date: June 19, 2022
  *
- *  Online (Heroku) Link: https://warm-shelf-44471.herokuapp.com/
+ *  Online (Heroku) Link: https://warm-shelf-44471.herokuapp.com/about
  *
  ********************************************************************************/
 
