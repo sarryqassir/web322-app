@@ -67,6 +67,7 @@ module.exports.addPost = (postData) => {
       postData.published = true;
     }
     postData.id = posts.length + 1;
+    postData.postDate = new Date().toISOString().split("T")[0];
     posts.push(postData);
     resolve();
   });
@@ -105,6 +106,19 @@ module.exports.getPostById = (id) => {
       reject("No results returned");
     } else {
       resolve(idPosts);
+    }
+  });
+};
+
+module.exports.getPublishedPostsByCategory = (category) => {
+  return new Promise((resolve, reject) => {
+    let publishedPostsByCategory = posts.filter(
+      (post) => post.category === category && post.published === true
+    );
+    if (publishedPostsByCategory.length === 0) {
+      reject("No results returned");
+    } else {
+      resolve(publishedPostsByCategory);
     }
   });
 };

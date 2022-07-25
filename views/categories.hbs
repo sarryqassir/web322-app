@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>Categories</h2>
+    <hr />
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Category ID</th>
+          <th>Category Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each categories}}
+          <tr>
+             <td>{{#navLink (createURL "/posts?category=" id)}}{{id}}{{/navLink}}</td>
+             <td>{{#navLink (createURL "/posts?category=" id)}}{{category}}{{/navLink}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+  </div>
+  <div class="col-md-12 text-center">
+      <strong>{{message}}</strong>
+  </div>
+
+</div>
